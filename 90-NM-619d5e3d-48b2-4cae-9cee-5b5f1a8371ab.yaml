@@ -1,0 +1,27 @@
+network:
+  version: 2
+  wifis:
+    NM-619d5e3d-48b2-4cae-9cee-5b5f1a8371ab:
+      renderer: NetworkManager
+      match:
+        name: "wlp3s0"
+      dhcp4: true
+      dhcp6: true
+      access-points:
+        "eduroam":
+          auth:
+            key-management: "eap"
+            method: "peap"
+            identity: "__CPF__@uerj.br"
+            phase2-auth: "mschapv2"
+            password: "__SENHA___EMAIL"
+          networkmanager:
+            uuid: "619d5e3d-48b2-4cae-9cee-5b5f1a8371ab"
+            name: "eduroam"
+            passthrough:
+              ipv6.addr-gen-mode: "default"
+              ipv6.ip6-privacy: "-1"
+              proxy._: ""
+      networkmanager:
+        uuid: "619d5e3d-48b2-4cae-9cee-5b5f1a8371ab"
+        name: "eduroam"

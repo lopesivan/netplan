@@ -1,0 +1,19 @@
+network:
+  version: 2
+  ethernets:
+    zz-all-en:
+      renderer: NetworkManager
+      match: {}
+      addresses:
+      - "192.168.2.44/24"
+      networkmanager:
+        uuid: "3fc91611-2585-3063-ac16-0d3e7c50d8c3"
+        name: "netplan-zz-all-en"
+        passthrough:
+          connection.timestamp: "1727406167"
+          match.interface-name: "en*;"
+          ipv4.address1: "192.168.2.44/24,192.168.2.1"
+          ipv4.method: "manual"
+          ipv6.method: "disabled"
+          ipv6.ip6-privacy: "-1"
+          proxy._: ""
